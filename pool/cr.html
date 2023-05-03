@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<?php 
+session_start();
+?>
+<!DOCTYPE html>
+<title>Home Page</title>
+<style>
+    *{
+        text-decoration: none;
+    }
+    .content{
+        position:absolute;
+        top: 80px;
+    }
+    body{
+        height:100%;
+        width:100%;
+        background-image:url("driver.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow:hidden;
+    }
+    .form-box{
+        /* background-color: aliceblue; */
+        position: absolute;
+        top:50px;
+        left:640px;
+        width: 360px;
+        height:720px;
+        position: relative;
+        /* margin: 6% auto; */
+        backdrop-filter: blur(2px);
+        border-radius: 15px;
+        padding :5px;
+        overflow: hidden;
+    }
+    .input-group{
+        top:10px;
+        position: absolute;
+        width: 280px;
+        transition: .5s;
+    }
+    ::placeholder{
+        color:rgb(255, 255, 255);
+        position:absolute;
+        left:15px;
+    }
+    #bt1{   
+            background-color: rgb(255, 200, 0);
+            border-radius: 15px;
+        }
+        #bt2{
+            background-color: rgb(72, 255, 0);
+            border-radius:15px;
+        }
+    .input-field{
+        width:100%;
+        padding : 10px 0;
+        margin:5px 0;
+        background-color: rgb(6, 90, 164);
+        border-radius:15px;
+        text-indent: 15px;
+        border-left: 1px solid #ffff;
+        border-top:1px solid #ffff;
+        border-right:1px solid #ffff;
+        font-size: 20px;
+        border-bottom:1px solid #ffff;
+        color:rgb(255, 255, 255);
+        outline:none;
+        background: transparent;
+    }
+    .input-field, textarea {
+
+    background-color : #00000080; 
+
+}
+    .submit-btn{
+        position: absolute;
+        top:480px;
+        left:20px;
+        width:65%;  
+        padding :10px 30px;
+         cursor: pointer;
+         display: block;
+         margin: auto;
+         background: #027693;
+         border:0;
+         outline:none;
+         color: aliceblue;
+         border-radius: 25px;
+    }
+    </style>
+
+<body>
+    <div class="topnav" id="myTopnav" style="top:5px;font-family:'Times New Roman';background-color: #121212;color:azure;height: 50px;left:28%;position:absolute; width:46%;vertical-align: middle !important;border-radius:30px">
+        <div class="rt-container">    
+            <form action="lout.php">
+                          <button type="submit" style="position:absolute;right:10px;background-color:rgba(0, 110, 255, 0.175);color: aliceblue;">Logout</button>
+                        </form> 
+                        <a href="p.html">
+                          <button type="submit" style="position:absolute;right:70px;background-color: rgba(50, 156, 205, 0.193);color: aliceblue;">Edit profile</button> </a>
+                <div class="col-rt-2">
+                    <ul>
+                    <a href ="home.php"><button type="submit" style="position:absolute;leftt:10px;background-color:rgba(0, 110, 255, 0.175);color: aliceblue;">Back to Home</button></a>
+                    </ul>
+                </div>
+                </div>
+        </div>
+        <br>
+        <br>
+    <div class="hero">
+        <div class="form-box">
+    <form id ="Register" class="input-group" action="cr.php" method="post">
+        <input type="text" class="input-field" placeholder="Starpoint" name="st" required>
+        <input type="text" class="input-field" placeholder="Endpoint" name ="ep" required>
+        <input type="text" class="input-field" placeholder="Waypoint" name ="wp" required>
+        <input type="time" class="input-field" placeholder="Time"  name ="t" required>
+        <input type="date" class="input-field" placeholder="Date" name="d" required>            
+        <input type="number" class="input-field" placeholder="Capactiy" name ="c" required>
+        <input type="number" class="input-field" placeholder="Cost" name ="co" required>
+        <input type="text" class="input-field" placeholder="Alt. Pickup/Dropoff(Yes/ No)" name ="ap" required>
+        <button type="submit" class="submit-btn" name="submit">Create</button>
+    </form>
+    </div>
+</div>
+
+<img src="logo.jpeg" style="position:absolute;bottom:0px;right:0px;height:72px;">
+</body>
+</html>
+</html>
